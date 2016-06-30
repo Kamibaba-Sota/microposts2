@@ -24,4 +24,8 @@ class User < ActiveRecord::Base
     def following?(other_user)
         following_users.include?(ohter_user)
     end
+    
+    def feed_itmes
+        Micropost.where(user_id: following_user_ids + [self.id])
+    end
 end
