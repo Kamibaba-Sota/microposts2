@@ -13,6 +13,7 @@ module Microposts2
      g.javascript false
      g.heiper false
      g.test_framework false
+     config.action_view.embed_authenticity_token_in_remote_forms = true
    end
   end
 end
